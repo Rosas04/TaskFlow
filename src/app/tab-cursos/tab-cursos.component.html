@@ -1,0 +1,25 @@
+<div class="contenedor">
+  <h1>Mis Cursos</h1>
+  <div class="schedule">
+    <div *ngFor="let curso of cursos; let i = index" class="schedule-card">
+      <span class="course-name">{{ curso.course }}</span> 
+      <button (click)="eliminarCurso(i)">X</button>
+    </div>
+  </div>
+
+  <button (click)="mostrarFormulario = true" class="open-form-button">
+    Agregar curso
+  </button>
+  <!-- Modal -->
+  <div class="modal-backdrop" *ngIf="mostrarFormulario">
+    <div class="modal">
+      <h2>Nuevo Curso</h2>
+      <input [(ngModel)]="nuevoCurso.course" placeholder="Nombre del curso" required class="te"/>
+      <div class="modal-buttons">
+        <button (click)="agregarCurso()">Guardar</button>
+        <button (click)="mostrarFormulario = false">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+</div>

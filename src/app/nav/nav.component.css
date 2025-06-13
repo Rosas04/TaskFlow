@@ -1,0 +1,209 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Importante para que el scroll lo manejen los componentes internos */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Puedes definir una fuente base */
+}
+
+/* 2. Contenedor principal del layout (donde app-nav y router-outlet están en fila) */
+.main-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Esto es para que el scroll general esté desactivado, y lo manejen los componentes internos */
+}
+
+/* 3. Estilos para el componente de navegación (app-nav, que contiene el .sidebar-container) */
+app-nav {
+  width: 100px; /* Ancho fijo para la barra de navegación */
+  flex-shrink: 0; /* IMPIDE que la barra de navegación se encoja */
+  background-color: #ffffff; /* Fondo blanco para la navegación */
+  color: #000000; /* Color de texto predeterminado para la navegación */
+  padding: 0; /* Elimina el padding externo del app-nav si ya lo tienes en sidebar-container */
+  box-sizing: border-box;
+  /* overflow-y: auto; si el contenido del nav puede ser muy largo */
+}
+
+/* 4. Estilos para el router-outlet (el contenido principal) */
+router-outlet {
+  flex-grow: 1; /* Permite que router-outlet crezca y ocupe todo el espacio restante */
+  margin: 0;
+  padding: 0; /* Elimina cualquier padding que el router-outlet pudiera añadir */
+  box-sizing: border-box;
+  overflow-y: auto; /* Permite scroll vertical SOLO en el router-outlet */
+  overflow-x: hidden; /* Evita scroll horizontal en el router-outlet */
+  background-color: #f8f8f8; /* Un color claro para el contenido principal */
+}
+
+/* 5. Estilos del Sidebar (Contenedor dentro de app-nav) */
+.sidebar-container {
+  width: 100%; /* Ocupa el 100% del ancho de su padre (app-nav) */
+  background-color: #ffffff;
+  color: #000000;
+  padding: 15px 10px; /* Padding interno del sidebar */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%; /* Ocupa el 100% de la altura de su padre (app-nav) */
+  display: flex;
+  flex-direction: column;  
+  overflow-y: auto;    /* Permite desplazamiento vertical si el contenido del sidebar es muy largo */
+}
+
+/* 6. Encabezado del Sidebar */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 0 2px;
+}
+
+.foto{
+  background-color: #474747;
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+}
+
+.editar-perfil {
+  margin-left: 5px;
+  display: flex; /* Asegura que el botón se alinee como quieras dentro de este div */
+  align-items: center;
+  justify-content: center;
+  
+  /* Puedes añadir más estilos aquí si necesitas controlar el espacio alrededor del icono */
+}
+
+.editar-perfil button {
+  background-color: transparent; /* Fondo transparente */
+  border: none;                  /* Sin bordes */
+  padding: 0;                    /* Sin padding interno, para que el icono ocupe todo el espacio */
+  cursor: pointer;               /* Mantén el cursor de puntero para indicar que es clickeable */
+  font-size: 1.3em;              /* Asegura que el tamaño del icono sea legible (ajusta si es necesario) */
+  color: #000000;              /* Color del icono (ajusta si quieres un color diferente) */
+  transition: color 0.2s ease;   /* Transición suave para el efecto hover */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+
+}
+
+.app-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.app-name {
+  white-space: nowrap;   /* Asegura que el nombre de la app esté en una línea */
+  overflow: visible;     /* Permite que el nombre de la app se desborde */
+  text-overflow: clip;   /* Evita los puntos suspensivos en el nombre de la app */
+}
+
+.dropdown-arrow {
+  font-size: 1.2em;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.header-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-arrow:hover, .edit-icon:hover, .dropdown-arrow:hover {
+  color: #fff;
+}
+
+.menu-item.active {
+  background-color: #ffffff; /* Fondo para el elemento activo */
+  font-weight: bold;
+}
+
+.menu-item .menu-text {
+  white-space: nowrap;   /* **Muestra el texto en una sola línea** */
+  overflow: visible;     /* **Permite que el texto se desborde visualmente** */
+}
+
+.menu{
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: flex-start; /* Alinea los botones al inicio horizontalmente */
+  text-align: left; /* Alinea el texto de los botones */
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5px;
+}
+
+.menu button {
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-align: left;
+  border-radius: 10px;
+  width: 150px;
+}
+
+.menu button:hover {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  width: 150px;
+}
+
+.menu button:active {
+  background-color: #d0d0d0;
+   border-radius: 10px;
+  width: 150px;
+}
+
+.menu button.selected {
+  background-color: #c0c0c0;
+  border-radius: 10px;
+  width: 150px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown-menu a {
+  padding: 10px 16px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}

@@ -1,0 +1,81 @@
+.registro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+
+}
+
+.register-link{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+h2 {
+    font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-field::placeholder {
+  color: #aaa;
+}
+
+.input-field:focus {
+  border-color: #000;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #ccc; /* Placeholder for eye icon */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+.login-form {
+  width: 100%;
+  max-width: 380px;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+}

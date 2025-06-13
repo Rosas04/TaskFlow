@@ -1,0 +1,110 @@
+.contenedor {
+  padding: 1rem;
+  width: 100vh;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.open-form-button {
+  background-color: #9b9b9b;
+  color: white;
+  padding: 7px 20px;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.course-name {
+  font-size: 0.9rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal-backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(91, 91, 91);
+  border-radius: 10px;
+  width: 30%;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  min-height: 150px; /* Mínima altura para evitar espacio innecesario */
+  max-height: 200px; /* Límite superior para controlar la altura */
+  overflow: hidden; /* Evita que el contenido desborde y cree espacio */
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%; /* Ocupa todo el espacio del modal-backdrop */
+  justify-content: center; /* Centra verticalmente el contenido */
+}
+
+.modal input {
+  padding: 0.5rem;
+  border: 1px solid #cccccc60;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  background-color: #9b9b9b59;
+  color: white;
+  width: 80%;
+}
+
+input::placeholder {
+  color: #ffffff;
+}
+
+.modal button {
+  background-color: #9b9b9b;
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 0.3rem;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.modal .button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.schedule-card {
+  background-color: #f5f5f5;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.schedule-card button {
+  background-color: transparent;
+  color: rgb(146, 146, 146);
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+button {
+  cursor: pointer;
+}

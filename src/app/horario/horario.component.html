@@ -1,0 +1,48 @@
+<h2>Horario</h2>
+
+<!-- Botones de pestañas -->
+<div class="tabs">
+  <!-- Pestañas dinámicas de horarios -->
+  <button
+    class="tab"
+    *ngFor="let horario of horarios"
+    [class.active]="horarioActivo?.nombre === horario.nombre"
+    (click)="seleccionarHorario(horario)"
+  >
+    {{ horario.nombre }}
+    <span class="delete-btn" (click)="eliminarHorario(horario)">×</span>
+  </button>
+
+  <!-- Botón Agregar -->
+  <button class="add-tab-btn" (click)="mostrarFormulario = true">+ agregar</button>
+</div>
+
+<!-- Formulario de nuevo horario -->
+<div *ngIf="mostrarFormulario" class="nuevo-horario-form">
+  <input
+    type="text"
+    [(ngModel)]="nuevoNombreHorario"
+    placeholder="Nombre del nuevo horario"
+  >
+  <button (click)="agregarHorario()">Crear</button>
+  <button (click)="mostrarFormulario = false">Cancelar</button>
+</div>
+
+<!-- Contenido de la pestaña activa -->
+<div class="contenido-tab">
+  <div *ngIf="horarioActivo">
+    <h3>{{ horarioActivo.nombre }}</h3>
+    <div *ngFor="let dia of horarioActivo.dias">
+      <h4>{{ dia.name }}</h4>
+      <ul>
+        <li *ngFor="let curso of dia.slots">
+          {{ curso.course }} - {{ curso.time }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div *ngIf="!horarioActivo && horarios.length === 0">
+    <p>No hay horarios creados. Presiona "+ agregar" para comenzar.</p>
+  </div>
+</div>

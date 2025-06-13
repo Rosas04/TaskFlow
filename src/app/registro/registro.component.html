@@ -1,1 +1,20 @@
-<p>registro works!</p>
+<div class="registro-container">
+  <h2>¡Regístrate!</h2>
+    <div class="login-form">
+    <div class="input-group">
+      <input type="text" placeholder="nombre" class="input-field">
+    </div>
+    <div class="input-group">
+      <input type="text" placeholder="apellidos" class="input-field">
+    </div>
+    <div class="input-group">
+      <input type="email" placeholder="email" class="input-field">
+    </div>
+    <div class="input-group">
+      <input type="password" placeholder="contraseña" class="input-field">
+    </div>
+    <button class="login-button">Registrarse</button>
+  </div>
+  <div class="register-link">
+    ¿Ya tienes cuenta? <a [routerLink]="'/iniciar-sesion'" class="iniciar-sesion">Iniciar Sesion</a>
+  </div>

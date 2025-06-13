@@ -1,0 +1,50 @@
+.nom-curso{
+    display: flex;
+    flex: start;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    align-items: start;
+    margin: 15px;
+}
+
+.botones{
+    display: flex;
+    margin: 20px;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    list-style: none;
+    padding: 0px;
+
+}
+
+.botones li a {
+    background-color: rgb(179, 177, 177);
+    padding: 5px 20px;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+    margin-left: 10px;
+}
+
+.botines:hover, botones:active{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.tab {
+  border: none;
+  background: #e9ecef;
+  border-radius: 20px;
+  padding: 5px 15px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #747474;
+  color: white;
+}

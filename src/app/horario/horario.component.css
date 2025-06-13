@@ -1,0 +1,62 @@
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 6px 12px;
+  background-color: #c4c4c4;
+ border: none;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  border-radius: 20px;
+}
+
+.tab.active {
+  background-color: #8b8b8b;
+  font-weight: bold;
+}
+
+.add-tab-btn {
+  background-color: #606160;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius:20px;
+  cursor: pointer;
+}
+
+.nuevo-horario-form {
+  margin: 10px 0;
+}
+
+.nuevo-horario-form input {
+  padding: 6px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border:0.5px solid #c4c4c4;
+}
+
+.nuevo-horario-form button {
+  padding: 6px 10px;
+  margin-right: 0;
+  border-radius: 10px;
+  border:0.5px solid #c4c4c4;
+  background-color: #8b8c8b;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-btn {
+  margin-left: 6px;
+  color: rgb(110, 110, 110);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contenido-tab {
+  margin-top: 20px;
+}

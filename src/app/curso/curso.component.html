@@ -1,0 +1,11 @@
+<div class="conteiner">
+    <div class="nom-curso">
+        Nombre del curso
+    </div>
+        <div class="body">
+             <div class="schedule-tabs">
+                <button class="tab" [class.active]="activeTab === 'tablero'" (click)="setTab('tablero')">Tablero</button>
+                <button class="tab" [class.active]="activeTab === 'tareas'" (click)="setTab('tareas')">Tareas</button>
+            </div>
+        </div>
+</div>

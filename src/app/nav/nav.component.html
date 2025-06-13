@@ -1,0 +1,23 @@
+<div class="sidebar-container">
+  <div class="sidebar-header">
+    <div class="app-title-group">
+      <div class="foto"></div>
+        <div class="editar-perfil">
+          <div class="dropdown">
+            <button class="dropdown-toggle" onclick="toggleDropdown()">{{ appName }}</button>
+            <div class="dropdown-menu">
+              <a href="#">Editar perfil</a>
+              <a href="#">Cerrar sesión</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="menu">
+    <button [routerLink]="'/home'" [ngClass]="{ 'selected': active === 'inicio' }" (click)="active = 'inicio'">Inicio</button>      
+    <button [routerLink]="'/tab-cursos'" [ngClass]="{ 'selected': active === 'cursos' }" (click)="active = 'cursos'">Cursos</button>
+    <button [routerLink]="'/horario'" [ngClass]="{ 'selected': active === 'horarios' }" (click)="active = 'horarios'">Horarios</button>
+    <button [routerLink]="'/proyecto'" [ngClass]="{ 'selected': active === 'proyecto' }" (click)="active = 'proyecto'">Proyectos</button>
+  </div>
+</div>

@@ -1,0 +1,125 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding:10px;
+  background-color: #ffffff; /* Fondo oscuro similar a la imagen */
+  color: #000000; /* Color de texto claro */
+  font-family: Arial, sans-serif;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.section-header .material-icons-outlined {
+  font-size: 1.5em;
+  color: #888; /* Color de icono más tenue */
+}
+
+/* **CONTENEDOR DEL CARRUSEL** */
+.carousel-container {
+  scroll-behavior: smooth;
+  padding: 10px; /* Padding interno del contenedor del scroll */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  flex: 0 1 300px;
+}
+
+/* **PISTA DEL CARRUSEL (DONDE ESTÁN LAS TARJETAS)** */
+.carousel-track {
+  display: flex;       /* Habilita Flexbox */
+  gap: 10px;        /* Espacio entre las tarjetas */
+  
+}
+
+/* **TARJETAS INDIVIDUALES** */
+.page-card {
+  max-width: 100px; /* **Ancho mínimo fijo para cada tarjeta.** */
+  background-color: #b9b9b9;
+  border-radius: 8px;
+  padding: 10px;
+  flex-shrink: 0; /* **¡CLAVE! Evita que la tarjeta se encoja.** */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  
+}
+
+
+.page-card:hover {
+  transform: translateY(-5px);
+}
+
+.page-card.dark-card {
+  background-color: #999999;
+}
+
+.page-icon {
+  font-size: 2em;
+}
+
+.page-title {
+  font-size: 1em;
+  font-weight: 600;
+  color: #000000;
+}
+
+.section-header-calen {
+  display: flex;
+  flex-direction: column; /* Asegura que h3 y .pendientes estén en columnas distintas */
+  gap: 5px; /* Espacio entre h3 y .pendientes */
+}
+
+.pendientes {
+  display: flex;
+  flex-direction: row; /* Pone calendario y tareas en la misma fila */
+  gap: 6px; /* Espacio entre calendario y tareas */
+  background-color: #999999;
+  width: 50rem;
+  height: 15rem;
+  margin-left: 20px;
+  border-radius: 20px;
+}
+
+.calendario {
+  flex: 7; /* 70% del espacio */
+  background-color: #f1f1f1;
+  padding: 8px 12px;
+  border-radius: 20px 0 0 20px ;
+  margin: 5px;
+}
+
+.tareas {
+  flex: 3; /* 30% del espacio */
+  background-color: #e3e3e3;
+  padding: 8px 12px;
+  border-radius: 0 20px 20px 0;
+  margin: 5px;
+}
+
+h3{
+  padding-top: 20px;
+  padding-bottom: 5px;
+  margin: 0;
+}

@@ -1,33 +1,20 @@
 <div class="login-container">
   <div class="login-header">
-    <h2>Welcome back!</h2>
-    <p>Simplify your workflow and boost your productivity<br> with Tugo's App. Get started for free.</p>
+    <h2>¡Hola de nuevo!</h2>
   </div>
 
   <div class="login-form">
     <div class="input-group">
-      <input type="text" placeholder="Username" class="input-field">
+      <input type="text" placeholder="usuario" class="input-field">
     </div>
     <div class="input-group">
-      <input type="password" placeholder="Password" class="input-field">
-      <span class="toggle-password"></span>
+      <input type="password" placeholder="contraseña" class="input-field">
     </div>
-    <a href="#" class="forgot-password">Forgot Password?</a>
     
-    <button class="login-button">Login</button>
-  </div>
-
-  <div class="separator">
-    <span>or continue with</span>
-  </div>
-
-  <div class="social-login">
-    <button class="social-icon google"></button>
-    <button class="social-icon apple"></button>
-    <button class="social-icon facebook"></button>
+    <button class="login-button"> <a [routerLink]="'/home'" style="color: white; text-decoration: none">Iniciar</a></button>
   </div>
 
   <div class="register-link">
-    Not a member? <a href="#" class="register-now">Register now</a>
+    ¿Aun no eres tienes cuenta? <a [routerLink]="'/registro'" class="register-now">Registrarse</a>
   </div>
 </div>
